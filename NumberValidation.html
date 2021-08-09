@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           
+            function NumberID() {
+       
+          var n = document.form.numbers.value;
+  
+
+          if (isNaN(n)) {
+
+            document.getElementById(
+             "numbertext").innerHTML =
+                 "Please enter Number value";
+                    return false;
+                } else {
+           
+                    document.getElementById(
+                      "numbertext").innerHTML = 
+                 "Number value is: " + n;
+                    return true;
+                }
+            }
+        </script>
+    </head>
+  
+    <body>
+      <p>Please enter your NumberID</p>
+  
+        <form name="form"
+              onsubmit="return NumberID()">
+
+            Number: <input type="text"
+                           name="numbers" />
+          <span id="numbertext"></span>
+          <br />
+            <input type="submit"
+                   value="submit" />
+        </form>
+    </body>
+</html>
